@@ -1,15 +1,25 @@
-# SimXNS Project
-This repo provides the code of SimANS. In the paper, we propose a simple, general and flexible ambiguous negatives sampling method for dense text retrieval. It can be easily applied to various dense retrieval methods.
+# 📚 SimXNS Project
 
-This repo is still developing, feel free to report bugs and we will fix them.
+[✨Updates](#️UPDATES) | [📜Citation](#Citation) | [🤘Furthermore](#Furthermore) | [❤️Contributing](#Contributing)| [🔑Trademarks](#Trademarks)
+
+[SimXNS](https://aka.ms/simxns) is a research project for information retrieval by MSRA NLC IR team. Some of the techniques are actively used in [Microsoft Bing](https://www.bing.com/). This repo provides the official code implementations.
+
+Currently, this repo contains `SimANS`, and all these methods are designed for information retrieval.
+Here are some basic descriptions to help you catch up with the characteristics of each work:
+- [**SimANS**](https://arxiv.org/abs/2210.11773) is a simple, general and flexible ambiguous negatives sampling method for dense text retrieval. It can be easily applied to various dense retrieval methods like [AR2](https://github.com/microsoft/AR2). We tested this method on the [MS MARCO](https://microsoft.github.io/msmarco/), [Natural Questions](https://ai.google.com/research/NaturalQuestions/) and [TriviaQA](http://nlp.cs.washington.edu/triviaqa/), and outperformed the state-of-the-art methods. This method is also applied in [Bing](https://www.bing.com/) search engine, which is proven to be effective. The whole magic is behind this formula.
+$$p_{i} \propto \exp{(-a\cdot(s(q,d_{i})-s(q,\tilde{d}^{+})-b)^{2})}, \forall~d_{i} \in \hat{\mathcal{D}}^{-}$$
 
 
-## News
-- **SimANS: Simple Ambiguous Negatives Sampling for Dense Text Retrieval**, Kun Zhou, Yeyun Gong, Xiao Liu, Wayne Xin Zhao, Yelong Shen, Anlei Dong, Jingwen Lu, Rangan Majumder, Ji-Rong Wen, Nan Duan, Weizhu Chen ***EMNLP 2022***, [Code](https://github.com/microsoft/SimXNS/tree/main/SimANS) [Paper](https://arxiv.org/abs/2210.11773)
+## Updates
+
+- 2022/11/17: release the official code of [SimANS](https://github.com/microsoft/SimXNS/tree/main/SimANS).
 
 
-## How to Cite
+## Citation
 If you extend or use this work, please cite our paper where it was introduced:
+
+
+- **SimANS: Simple Ambiguous Negatives Sampling for Dense Text Retrieval**, Kun Zhou, Yeyun Gong, Xiao Liu, Wayne Xin Zhao, Yelong Shen, Anlei Dong, Jingwen Lu, Rangan Majumder, Ji-Rong Wen, Nan Duan, Weizhu Chen. ***EMNLP 2022***. [Code](https://github.com/microsoft/SimXNS/tree/main/SimANS), [Paper](https://arxiv.org/abs/2210.11773).
 ```bibtex
 @article{zhou2022simans,
    title={SimANS: Simple Ambiguous Negatives Sampling for Dense Text Retrieval},
@@ -18,6 +28,11 @@ If you extend or use this work, please cite our paper where it was introduced:
    year={2022}
 }
 ```
+
+
+## Furthermore
+
+This repo is still developing, feel free to report bugs and we will fix them.
 
 
 ## Contributing

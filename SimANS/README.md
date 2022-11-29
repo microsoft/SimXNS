@@ -1,9 +1,9 @@
-## SimANS: Simple Ambiguous Negatives Sampling for Dense Text Retrieval
+# SimANS: Simple Ambiguous Negatives Sampling for Dense Text Retrieval
 
 This repository contains the code for our paper [***SimANS: Simple Ambiguous Negatives Sampling for Dense Text Retrieval***](https://arxiv.org/abs/2210.11773).
 
 
-## Overview
+## 🚀 Overview
 
 We propose ***SimANS***, a simple, general and flexible ambiguous negatives sampling method for dense text retrieval. It can be easily applied to various dense retrieval methods.
 
@@ -23,10 +23,19 @@ def SimANS(pos_pair, neg_pairs_list):
     return random.choices(neg_candidates, weights=neg_scores, k=num_hard_negatives)
 ```
 
+Here we show the main results on [MS MARCO](https://microsoft.github.io/msmarco/), [Natural Questions](https://ai.google.com/research/NaturalQuestions/) and [TriviaQA](http://nlp.cs.washington.edu/triviaqa/). This method outperformes the state-of-the-art methods.
+![SimANS Main Result](figs/simans_main_result.jpg)
 
-## How to Use
+This method has been applied in [Microsoft Bing](https://www.bing.com/), and we also show the results on the industry dataset.
+<!-- ![SimANS Industry Result](figs/simans_industry_result.jpg) -->
+<div align=center> <img src="figs/simans_industry_result.jpg" width = 45%/> </div>
 
-**Environment Setting**
+Please find more details in the paper.
+
+
+## 🙋 How to Use
+
+**⚙️ Environment Setting**
 
 To faithfully reproduce our results, please use the correct `1.7.1` pytorch version corresponding to your platforms/CUDA versions according to [Released Packages by pytorch](https://anaconda.org/pytorch/pytorch), and install faiss successfully for evaluation.
 
@@ -44,13 +53,13 @@ pip install sklearn
 pip install boto3
 ```
 
-**Data and Initial Checkpoint**
+**💾 Data and Initial Checkpoint**
 
 We list the necessary data for training on MS-Pas/MS-Doc/NQ/TQ [here](https://msranlcir.blob.core.windows.net/simxns/SimANS/data.zip). You can download the compressed file and put the content in `./data`.
 
 In our approach, we require to use the checkpoint from AR2 for initialization. We release them [here](https://msranlcir.blob.core.windows.net/simxns/SimANS/ckpt.zip). You can download the compressed file and put the content in `./ckpt`.
 
-**Training Scripts**
+**📋 Training Scripts**
 
 We provide the training scripts using SimANS on SOTA AR2 model for MS-MARCO-Passage/Document Retrieval, NQ and TQ datasets, and have set up the best hyperparameters for training. You can run it to automatically finish the training and evaluation.
 ```bash
@@ -62,12 +71,12 @@ bash train_TQ_AR2.sh
 
 For results in the paper, we use 8 * A100 GPUs with CUDA 11. Using different types of devices or different versions of CUDA/other softwares may lead to different performance.
 
-**Best SimANS Checkpoint**
+**⚽ Best SimANS Checkpoint**
 
 For better reproducing our experimental results, we also release all the checkpoint of our approach [here](https://msranlcir.blob.core.windows.net/simxns/SimANS/best_simans_ckpt.zip). You can download the compressed file and reuse the content for evaluation.
 
 
-## Citation
+## 📜 Citation
 
 Please cite our paper if you use [SimANS](https://arxiv.org/abs/2210.11773) in your work:
 ```bibtex
