@@ -8,14 +8,15 @@ Currently, this repo contains `SimANS` and `MASTER`, and all these methods are d
 Here are some basic descriptions to help you catch up with the characteristics of each work:
 - [**SimANS**](https://arxiv.org/abs/2210.11773) is a simple, general and flexible ambiguous negatives sampling method for dense text retrieval. It can be easily applied to various dense retrieval methods like [AR2](https://github.com/microsoft/AR2). We tested this method on the [MS MARCO](https://microsoft.github.io/msmarco/), [Natural Questions](https://ai.google.com/research/NaturalQuestions/) and [TriviaQA](http://nlp.cs.washington.edu/triviaqa/), and outperformed the state-of-the-art methods. This method is also applied in [Bing](https://www.bing.com/) search engine, which is proven to be effective. The whole magic is behind this formula.
 ![SimANS](SimANS/figs/simans_main.jpg)
-- [**MASTER**](https://arxiv.org/abs/2212.07841) is a multi-task pre-trained model that unifies and integrates multiple pre-training tasks with different learning objectives under the bottlenecked masked autoencoder architecture.
+- [**MASTER**](https://arxiv.org/abs/2212.07841) is a multi-task pre-trained model that unifies and integrates multiple pre-training tasks with different learning objectives under the bottlenecked masked autoencoder architecture. We tested this method on the [MS MARCO](https://microsoft.github.io/msmarco/), [Natural Questions](https://ai.google.com/research/NaturalQuestions/) and [BEIR](https://github.com/beir-cellar/beir). This method outperforms the state-of-the-art methods.
 ![MASTER](MASTER/figs/master_main.jpg)
-We tested this method on the [MS MARCO](https://microsoft.github.io/msmarco/), [Natural Questions](https://ai.google.com/research/NaturalQuestions/) and [BEIR](https://github.com/beir-cellar/beir). This method outperforms the state-of-the-art methods.
+
 
 ## Updates
 
-- 2022/11/17: release the official code of [SimANS](https://github.com/microsoft/SimXNS/tree/main/SimANS).
 - 2022/12/16: release the official code of [MASTER](https://github.com/microsoft/SimXNS/tree/main/MASTER).
+- 2022/11/17: release the official code of [SimANS](https://github.com/microsoft/SimXNS/tree/main/SimANS).
+
 
 
 ## Citation
