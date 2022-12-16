@@ -1,11 +1,16 @@
 # MASTER
-The code of the ICLR2023 submission paper MASTER: **MASTER: Multi-task Pre-trained Bottlenecked Masked Autoencoders are Better Dense Retrievers**.
+The code of the ICLR2023 submission paper [***MASTER: Multi-task Pre-trained Bottlenecked Masked Autoencoders are Better Dense Retrievers***](https://arxiv.org/abs/2212.07841).
 
 
-## Overview
+## 🚀 Overview
 Our code is based on the public released code of [Condenser](https://github.com/luyug/Condenser). Our proposed approach incorporates three types of pre-training tasks, namely corrupted passages recovering, related passage recovering and PLMs outputs recovering, and unifies and integrates the above pre-training tasks with different learning objectives under the bottlenecked masked autoencoder architecture. 
 
-## Environments Setting
+Here we show the main results on [MS MARCO](https://microsoft.github.io/msmarco/). This method outperformes the state-of-the-art pretraining methods.
+![MASTER Main Result](figs/master_main_result.jpg)
+
+Please find more details in the paper.
+
+## ⚙️ Environments Setting
 We implement our approach based on Pytorch and Huggingface Transformers. For efficiently training, we also require the public toolkit fp16 for acceleration. We list the detailed environment setting command lines as follows:
 
 ```
@@ -26,7 +31,7 @@ pip install -v --disable-pip-version-check --no-cache-dir --global-option="--cpp
 ```
 
 
-## Pre-training
+## 🙋 Pre-training
 We publicly release our data and code for re-implementation our pre-training process.
 
 ### Pre-training Corpus
@@ -40,15 +45,16 @@ To construct our pre-training corpus, we first tokenize the given documents and 
 ```
 where "text" denotes the proprecessed documents, "queries" is the list consisting of the generated queries from DocT5, "next" is the generated following text by GPT-2. For the convenience of researchers to use them, we upload the pre-processed documents from MS-MARCO and Wikipedia as following:
 
-|[MS-MARCO](https://uswvhd.blob.core.windows.net/anonymous/MASTER/ms_pass4M5.tsv.json)|[Wikipedia](https://uswvhd.blob.core.windows.net/anonymous/MASTER/wiki_psg_w1004MT5.tsv.json)|
-|--------|---------|
-|Processed Documents for MS-MARCO passage retrieval task|Processed Documents for NQ, TQ, WQ and Squad datasets|
+|Corpus|Description|Link|
+|---|---|---|
+|MS-MARCO|Processed Documents for MS-MARCO passage retrieval task|https://uswvhd.blob.core.windows.net/anonymous/MASTER/ms_pass4M5.tsv.json|
+|Wikipedia|Processed Documents for NQ, TQ, WQ and Squad datasets|https://uswvhd.blob.core.windows.net/anonymous/MASTER/wiki_psg_w1004MT5.tsv.json|
 
 After download the above data, researchers can remove them into the **process_data** dir for usage.
 
 ### Generating the frequency dictionary
 For the Masked Keywords Prediction task, we require to calculate the word frequencies to detect the keywords. In the following, we provide the code to construct the dictionary consisting of the word and its frequency in the corpus:
-```
+```python
 import os
 import json
 from tqdm import tqdm
@@ -98,12 +104,14 @@ bash run_pretrain.sh
 * `--frequency_dict`: The dictionary that records the word frequencies calculated from the pre-training corpus. It will be used for the Masked Keywords Prediction task.
 * `--fp16`: using fp16 for training acceleration.
 
-## Fine-tuning
+## ⚽ Fine-tuning
 Here, we also provide the compressed pre-trained checkpoints of our approach on the MS-MARCO and Wikipedia documents as following:
 
-|[MS-MARCO](https://uswvhd.blob.core.windows.net/anonymous/MASTER/MASTER-MARCO.tar.gz)|[Wikipedia](https://uswvhd.blob.core.windows.net/anonymous/MASTER/MASTER-Wiki.tar.gz)|
-|--------|---------|
-|Pre-trained Checkpoint for MS-MARCO task|Pre-trained Checkpoint for NQ, TQ, WQ and Squad tasks|
+|Corpus|Description|Link|
+|---|---|---|
+|MS-MARCO|Pre-trained Checkpoint for MS-MARCO task|https://uswvhd.blob.core.windows.net/anonymous/MASTER/MASTER-MARCO.tar.gz|
+|Wikipedia|Pre-trained Checkpoint for NQ, TQ, WQ and Squad tasks|https://uswvhd.blob.core.windows.net/anonymous/MASTER/MASTER-Wiki.tar.gz|
+
 
 All the checkpoints are compressed into the tar.gz format, everyone can use them by the following command line to obtain our pre-training corpus.
 ```
@@ -112,8 +120,21 @@ cd MASTER-MARCO
 tar -zxvf MASTER-MARCO.tar.gz
 ```
 As our pre-trained model parameters are stored using the same format as BERT, everyone can directly load it using huggingface interface and freely fine-tuned. Here, we show an example to load our pre-trained checkpoint.
-```
+```python
 from transformers import AutoModel
 model = AutoModel.from_pretrained('MASTER-MARCO')
 ```
 During fine-tuning, the parameters of our pre-trained shallow decoders will be omitted, and only the parameters from the deep encoder will be used. We suggest to use the public released toolkit [Tevatron](https://github.com/texttron/tevatron/tree/main/examples/coCondenser-marco) to reproduce our experimental results.
+
+
+## 📜 Citation
+
+Please cite our paper if you use [MASTER](https://arxiv.org/abs/2212.07841) in your work:
+```bibtex
+@article{zhou2022master,
+   title={MASTER: Multi-task Pre-trained Bottlenecked Masked Autoencoders are Better Dense Retrievers},
+   author={Kun Zhou, Xiao Liu, Yeyun Gong, Wayne Xin Zhao, Daxin Jiang, Nan Duan, Ji-Rong Wen},
+   booktitle = {{arXiv}},
+   year={2022}
+}
+```
