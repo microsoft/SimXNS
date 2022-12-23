@@ -56,6 +56,7 @@ pip install boto3
 **💾 Data and Initial Checkpoint**
 
 We list the necessary data for training on MS-Pas/MS-Doc/NQ/TQ [here](https://msranlcir.blob.core.windows.net/simxns/SimANS/data.zip). You can download the compressed file and put the content in `./data`.
+If you are working on MS-Pas, you will need this [additional file](https://msranlcir.blob.core.windows.net/simxns/SimANS/data/MS-Pas/qrels.train.addition.tsv) for training.
 
 In our approach, we require to use the checkpoint from AR2 for initialization. We release them [here](https://msranlcir.blob.core.windows.net/simxns/SimANS/ckpt.zip). You can download the compressed file and put the content in `./ckpt`.
 
