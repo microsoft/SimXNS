@@ -124,7 +124,7 @@ def embed_passages(args, passages, model, tokenizer):
 def load_pos_examples(q_type='train'):
     """positive examples(only for MSMARCO)"""
     pos_qp = {}
-    file = os.path.join('/kun_data', 'marco/qrels.' + q_type + '.tsv')
+    file = os.path.join('data/MS-Pas/qrels.' + q_type + '.tsv')
     with open(file) as inp:
         for line in inp:
             line = line.strip()
@@ -137,7 +137,7 @@ def load_pos_examples(q_type='train'):
     # additional positive examples(collect by literal match)
     pos_qp_add = {}
     if q_type == 'train':
-        file_add = os.path.join('/kun_data', 'marco/qrels.' + q_type + '.addition.tsv')
+        file_add = os.path.join('data/MS-Pas/qrels.' + q_type + '.addition.tsv')
         with open(file_add) as inp:
             for line in inp:
                 qid, pid = line.strip().split('\t')
