@@ -1,6 +1,6 @@
 # SimANS: Simple Ambiguous Negatives Sampling for Dense Text Retrieval
 
-This repository contains the code for our paper [***SimANS: Simple Ambiguous Negatives Sampling for Dense Text Retrieval***](https://arxiv.org/abs/2210.11773).
+This repository contains the code for our EMNLP2022 paper [***SimANS: Simple Ambiguous Negatives Sampling for Dense Text Retrieval***](https://arxiv.org/abs/2210.11773).
 
 
 ## 🚀 Overview

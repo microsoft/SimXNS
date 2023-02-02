@@ -1,5 +1,6 @@
 # MASTER
-The code of the ICLR2023 submission paper [***MASTER: Multi-task Pre-trained Bottlenecked Masked Autoencoders are Better Dense Retrievers***](https://arxiv.org/abs/2212.07841).
+
+The code of the ICLR2023 submission [***MASTER: Multi-task Pre-trained Bottlenecked Masked Autoencoders are Better Dense Retrievers***](https://arxiv.org/abs/2212.07841).
 
 
 ## 🚀 Overview
