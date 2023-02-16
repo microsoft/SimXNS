@@ -15,6 +15,7 @@ Here are some basic descriptions to help you catch up with the characteristics o
 
 ## Updates
 
+- 2023/02/16: refine the resources of [SimANS](https://github.com/microsoft/SimXNS/tree/main/SimANS) by uploading files in a seperated style and offering the [file list](https://github.com/microsoft/SimXNS/tree/main/SimANS#-how-to-use).
 - 2023/02/02: release the official code of [PROD](https://github.com/microsoft/SimXNS/tree/main/PROD).
 - 2022/12/16: release the official code of [MASTER](https://github.com/microsoft/SimXNS/tree/main/MASTER).
 - 2022/11/17: release the official code of [SimANS](https://github.com/microsoft/SimXNS/tree/main/SimANS).
