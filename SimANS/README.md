@@ -58,13 +58,13 @@ pip install boto3
 We list the necessary data for training on MS-Pas/MS-Doc/NQ/TQ [here](https://msranlcir.blob.core.windows.net/simxns/SimANS/data.zip). You can download the compressed file and put the content in `./data`.
 If you are working on MS-Pas, you will need this [additional file](https://msranlcir.blob.core.windows.net/simxns/SimANS/data/MS-Pas/qrels.train.addition.tsv) for training.
 
-In our approach, we require to use the checkpoint from AR2 for initialization. We release them [here](https://msranlcir.blob.core.windows.net/simxns/SimANS/ckpt.zip). You can download the compressed file and put the content in `./ckpt`.
+In our approach, we require to use the checkpoint from AR2 for initialization. We release them [here](https://msranlcir.blob.core.windows.net/simxns/SimANS/ckpt.zip). You can download the all-in-one compressed file and put the content in `./ckpt`.
 
-Considering the difficulity and stability of downloading such big items, we reveal the content under the blob url of root folder `https://msranlcir.blob.core.windows.net/simxns/SimANS/`.
+Considering the difficulity and stability of downloading such a big item, we reveal the content under the blob url of root folder `https://msranlcir.blob.core.windows.net/simxns/SimANS/`.
 So you may choose to download only a part of the resources according to the desired datasets by appending the relative path to the blob url.
 
 <details>
-<summary>Click here to see the file list.</summary>
+<summary><b>Click here to see the file list.</b></summary>
 <pre><code>
 INFO: best_simans_ckpt.zip;  Content Length: 7.74 GiB
 INFO: ckpt.zip;  Content Length: 19.63 GiB
