@@ -2,7 +2,7 @@
 
 The code for our paper ''LEAD: Liberal Feature-based Distillation for Dense Retrieval".
 
-![model](/Users/haosun/Documents/资料/实习/MSRA/LEAD/LEAD_code_opensource/assets/model.jpg)
+![model](assets/model.jpg)
 
 ## Overview
 
@@ -10,7 +10,7 @@ Our proposed method LEAD aligns the layer features of student and teacher, empha
 
 Here we show the main results on [MS MARCO](https://microsoft.github.io/msmarco/). This method outperformes all the baselines.
 
-![main_result](/Users/haosun/Documents/资料/实习/MSRA/LEAD/LEAD_code_opensource/assets/main_result-5029190.jpg)
+![main_result](assets/main_result.jpg)
 
 ## Environments Setting
 
