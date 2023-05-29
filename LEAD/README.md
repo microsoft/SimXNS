@@ -1,6 +1,6 @@
 # LEAD
 
-The code for our paper ''LEAD: Liberal Feature-based Distillation for Dense Retrieval".
+The code for our paper [LEAD: Liberal Feature-based Distillation for Dense Retrieval](https://arxiv.org/abs/2212.05225).
 
 ![model](assets/model.jpg)
 

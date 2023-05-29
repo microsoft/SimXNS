@@ -4,17 +4,16 @@
 
 [SimXNS](https://aka.ms/simxns) is a research project for information retrieval by MSRA NLC IR team. Some of the techniques are actively used in [Microsoft Bing](https://www.bing.com/). This repo provides the official code implementations.
 
-Currently, this repo contains `SimANS`, `MASTER` and `PROD`, and all these methods are designed for information retrieval.
+Currently, this repo contains `SimANS`, `MASTER`, `PROD` and `LEAD`, and all these methods are designed for information retrieval.
 Here are some basic descriptions to help you catch up with the characteristics of each work:
-- [**SimANS**](https://arxiv.org/abs/2210.11773) is a simple, general and flexible ambiguous negatives sampling method for dense text retrieval. It can be easily applied to various dense retrieval methods like [AR2](https://github.com/microsoft/AR2). We tested this method on the [MS MARCO](https://microsoft.github.io/msmarco/), [Natural Questions](https://ai.google.com/research/NaturalQuestions/) and [TriviaQA](http://nlp.cs.washington.edu/triviaqa/), and outperformed the state-of-the-art methods. This method is also applied in [Bing](https://www.bing.com/) search engine, which is proven to be effective. The whole magic is behind this formula.
-![SimANS](SimANS/figs/simans_main.jpg)
-- [**MASTER**](https://arxiv.org/abs/2212.07841) is a multi-task pre-trained model that unifies and integrates multiple pre-training tasks with different learning objectives under the bottlenecked masked autoencoder architecture. We tested this method on the [MS MARCO](https://microsoft.github.io/msmarco/), [Natural Questions](https://ai.google.com/research/NaturalQuestions/) and [BEIR](https://github.com/beir-cellar/beir). This method outperforms the state-of-the-art methods.
-![MASTER](MASTER/figs/master_main.jpg)
-- [**PROD**](https://arxiv.org/abs/2209.13335) is a novel distillation framework for dense retrieval, which consists of a teacher progressive distillation and a data progressive distillation to gradually improve the student. We tested this method on the [MS MARCO](https://microsoft.github.io/msmarco/), [Natural Questions](https://ai.google.com/research/NaturalQuestions/) and [TREC 2019 Deep Learning Track](https://microsoft.github.io/msmarco/TREC-Deep-Learning-2019.html). This method exceeds almost all the existing methods with 6-layer students.
-
+- [**SimANS**](https://arxiv.org/abs/2210.11773) is a simple, general and flexible ambiguous negatives sampling method for dense text retrieval. It can be easily applied to various dense retrieval methods like [AR2](https://github.com/microsoft/AR2). This method is also applied in [Bing](https://www.bing.com/) search engine, which is proven to be effective.
+- [**MASTER**](https://arxiv.org/abs/2212.07841) is a multi-task pre-trained model that unifies and integrates multiple pre-training tasks with different learning objectives under the bottlenecked masked autoencoder architecture.
+- [**PROD**](https://arxiv.org/abs/2209.13335) is a novel distillation framework for dense retrieval, which consists of a teacher progressive distillation and a data progressive distillation to gradually improve the student.
+- [**LEAD**](https://arxiv.org/abs/2212.05225) aligns the layer features of student and teacher, emphasizing more on the informative layers by re-weighting.
 
 ## Updates
 
+- 2023/05/29: release the official code of [LEAD](https://github.com/microsoft/SimXNS/tree/main/LEAD).
 - 2023/02/16: refine the resources of [SimANS](https://github.com/microsoft/SimXNS/tree/main/SimANS) by uploading files in a seperated style and offering the [file list](https://github.com/microsoft/SimXNS/tree/main/SimANS#-how-to-use).
 - 2023/02/02: release the official code of [PROD](https://github.com/microsoft/SimXNS/tree/main/PROD).
 - 2022/12/16: release the official code of [MASTER](https://github.com/microsoft/SimXNS/tree/main/MASTER).
@@ -28,6 +27,8 @@ If you extend or use this work, please cite our paper where it was introduced:
 - **SimANS: Simple Ambiguous Negatives Sampling for Dense Text Retrieval**. Kun Zhou, Yeyun Gong, Xiao Liu, Wayne Xin Zhao, Yelong Shen, Anlei Dong, Jingwen Lu, Rangan Majumder, Ji-Rong Wen, Nan Duan, Weizhu Chen. ***EMNLP 2022***. [Code](https://github.com/microsoft/SimXNS/tree/main/SimANS), [Paper](https://arxiv.org/abs/2210.11773).
 - **MASTER: Multi-task Pre-trained Bottlenecked Masked Autoencoders are Better Dense Retrievers**. Kun Zhou, Xiao Liu, Yeyun Gong, Wayne Xin Zhao, Daxin Jiang, Nan Duan, Ji-Rong Wen. ***arXiv***. [Code](https://github.com/microsoft/SimXNS/tree/main/MASTER), [Paper](https://arxiv.org/abs/2212.07841).
 - **PROD: Progressive Distillation for Dense Retrieval**. Zhenghao Lin, Yeyun Gong, Xiao Liu, Hang Zhang, Chen Lin, Anlei Dong, Jian Jiao, Jingwen Lu, Daxin Jiang, Rangan Majumder, Nan Duan. ***WWW 2023***. [Code](https://github.com/microsoft/SimXNS/tree/main/PROD), [Paper](https://arxiv.org/abs/2209.13335).
+- **LEAD: Liberal Feature-based Distillation for Dense Retrieval**. Hao Sun, Xiao Liu, Yeyun Gong, Anlei Dong, Jian Jiao, Jingwen Lu, Yan Zhang, Daxin Jiang, Linjun Yang, Rangan Majumder, Nan Duan. ***arXiv***. [Code](https://github.com/microsoft/SimXNS/tree/main/LEAD), [Paper](https://arxiv.org/abs/2212.05225).
+
 
 ```bibtex
 @article{zhou2022simans,
@@ -48,12 +49,13 @@ If you extend or use this work, please cite our paper where it was introduced:
    booktitle = {{WWW}},
    year={2023}
 }
+@article{sun2022lead,
+  title={LEAD: Liberal Feature-based Distillation for Dense Retrieval},
+  author={Sun, Hao and Liu, Xiao and Gong, Yeyun and Dong, Anlei and Jiao, Jian and Lu, Jingwen and Zhang, Yan and Jiang, Daxin and Yang, Linjun and Majumder, Rangan and others},
+  journal={arXiv preprint arXiv:2212.05225},
+  year={2022}
+}
 ```
-
-
-## Furthermore
-
-This repo is still developing, feel free to report bugs and we will fix them.
 
 
 ## Contributing
