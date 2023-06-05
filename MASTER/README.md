@@ -88,6 +88,7 @@ json.dump(frequency_dict, open('frequency_dict_MS_doc.json','w', encoding='utf-8
 ### Pre-training using our Code
 Based on the pre-processed pre-training corpus and the word frequency dictionary, you can just run the following command for pre-training using our code:
 ```
+cd ./pretrain
 bash run_pretrain.sh
 ```
 
@@ -125,6 +126,7 @@ As our pre-trained model parameters are stored using the same format as BERT, ev
 from transformers import AutoModel
 model = AutoModel.from_pretrained('MASTER-MARCO')
 ```
+The demo code of finetuning is shown in the **./finetune** dir.
 During fine-tuning, the parameters of our pre-trained shallow decoders will be omitted, and only the parameters from the deep encoder will be used. We suggest to use the public released toolkit [Tevatron](https://github.com/texttron/tevatron/tree/main/examples/coCondenser-marco) to reproduce our experimental results.
 
 
