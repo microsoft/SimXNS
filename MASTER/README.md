@@ -1,6 +1,6 @@
 # MASTER
 
-The code of the ICLR2023 submission [***MASTER: Multi-task Pre-trained Bottlenecked Masked Autoencoders are Better Dense Retrievers***](https://arxiv.org/abs/2212.07841).
+The code of our ECML-PKDD 2023 paper [***MASTER: Multi-task Pre-trained Bottlenecked Masked Autoencoders are Better Dense Retrievers***](https://arxiv.org/abs/2212.07841).
 
 
 ## 🚀 Overview
@@ -137,7 +137,7 @@ Please cite our paper if you use [MASTER](https://arxiv.org/abs/2212.07841) in y
 @article{zhou2022master,
    title={MASTER: Multi-task Pre-trained Bottlenecked Masked Autoencoders are Better Dense Retrievers},
    author={Kun Zhou, Xiao Liu, Yeyun Gong, Wayne Xin Zhao, Daxin Jiang, Nan Duan, Ji-Rong Wen},
-   booktitle = {{arXiv}},
-   year={2022}
+   booktitle = {{ECML-PKDD}},
+   year={2023}
 }
 ```

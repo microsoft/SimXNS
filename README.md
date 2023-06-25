@@ -25,7 +25,7 @@ If you extend or use this work, please cite our paper where it was introduced:
 
 
 - **SimANS: Simple Ambiguous Negatives Sampling for Dense Text Retrieval**. Kun Zhou, Yeyun Gong, Xiao Liu, Wayne Xin Zhao, Yelong Shen, Anlei Dong, Jingwen Lu, Rangan Majumder, Ji-Rong Wen, Nan Duan, Weizhu Chen. ***EMNLP 2022***. [Code](https://github.com/microsoft/SimXNS/tree/main/SimANS), [Paper](https://arxiv.org/abs/2210.11773).
-- **MASTER: Multi-task Pre-trained Bottlenecked Masked Autoencoders are Better Dense Retrievers**. Kun Zhou, Xiao Liu, Yeyun Gong, Wayne Xin Zhao, Daxin Jiang, Nan Duan, Ji-Rong Wen. ***arXiv***. [Code](https://github.com/microsoft/SimXNS/tree/main/MASTER), [Paper](https://arxiv.org/abs/2212.07841).
+- **MASTER: Multi-task Pre-trained Bottlenecked Masked Autoencoders are Better Dense Retrievers**. Kun Zhou, Xiao Liu, Yeyun Gong, Wayne Xin Zhao, Daxin Jiang, Nan Duan, Ji-Rong Wen. ***ECML-PKDD 2023***. [Code](https://github.com/microsoft/SimXNS/tree/main/MASTER), [Paper](https://arxiv.org/abs/2212.07841).
 - **PROD: Progressive Distillation for Dense Retrieval**. Zhenghao Lin, Yeyun Gong, Xiao Liu, Hang Zhang, Chen Lin, Anlei Dong, Jian Jiao, Jingwen Lu, Daxin Jiang, Rangan Majumder, Nan Duan. ***WWW 2023***. [Code](https://github.com/microsoft/SimXNS/tree/main/PROD), [Paper](https://arxiv.org/abs/2209.13335).
 - **LEAD: Liberal Feature-based Distillation for Dense Retrieval**. Hao Sun, Xiao Liu, Yeyun Gong, Anlei Dong, Jian Jiao, Jingwen Lu, Yan Zhang, Daxin Jiang, Linjun Yang, Rangan Majumder, Nan Duan. ***arXiv***. [Code](https://github.com/microsoft/SimXNS/tree/main/LEAD), [Paper](https://arxiv.org/abs/2212.05225).
 
@@ -40,8 +40,8 @@ If you extend or use this work, please cite our paper where it was introduced:
 @article{zhou2022master,
    title={MASTER: Multi-task Pre-trained Bottlenecked Masked Autoencoders are Better Dense Retrievers},
    author={Kun Zhou, Xiao Liu, Yeyun Gong, Wayne Xin Zhao, Daxin Jiang, Nan Duan, Ji-Rong Wen},
-   booktitle = {{arXiv}},
-   year={2022}
+   booktitle = {{ECML-PKDD}},
+   year={2023}
 }
 @article{lin2023prod,
    title={PROD: Progressive Distillation for Dense Retrieval},
