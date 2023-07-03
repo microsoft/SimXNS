@@ -12,6 +12,40 @@ Here we show the main results on [MS MARCO](https://microsoft.github.io/msmarco/
 
 ![main_result](assets/main_result.jpg)
 
+
+## Released Resources
+
+We release the preprocessed data and trained ckpts in [Azure Blob](https://msranlciropen.blob.core.windows.net/simxns/LEAD/).
+Here we also provide the file list under this URL:
+<details>
+<summary><b>Click here to see the file list.</b></summary>
+<pre><code>INFO: ckpt/24_to_12_msdoc.ckpt;  Content Length: 1.22 GiB
+INFO: ckpt/24_to_12_mspas.ckpt;  Content Length: 1.22 GiB
+INFO: ckpt/24_to_12_trec_doc_19.ckpt;  Content Length: 1.22 GiB
+INFO: ckpt/24_to_12_trec_doc_20.ckpt;  Content Length: 1.22 GiB
+INFO: ckpt/24_to_12_trec_pas_19.ckpt;  Content Length: 1.22 GiB
+INFO: ckpt/24_to_12_trec_pas_20.ckpt;  Content Length: 1.22 GiB
+INFO: dataset/mspas/biencoder-mspas-train-hard.json;  Content Length: 1.56 GiB
+INFO: dataset/mspas/biencoder-mspas-train.json;  Content Length: 5.35 GiB
+INFO: dataset/mspas/mspas-test.qa.csv;  Content Length: 319.98 KiB
+INFO: dataset/mspas/psgs_w100.tsv;  Content Length: 3.06 GiB
+INFO: dataset/mspas/trec2019-test.qa.csv;  Content Length: 99.72 KiB
+INFO: dataset/mspas/trec2019-test.rating.csv;  Content Length: 46.67 KiB
+INFO: dataset/mspas/trec2020-test.qa.csv;  Content Length: 122.86 KiB
+INFO: dataset/mspas/trec2020-test.rating.csv;  Content Length: 57.48 KiB
+INFO: dataset/msdoc/biencoder-msdoc-train-hard.json;  Content Length: 800.13 MiB
+INFO: dataset/msdoc/biencoder-msdoc-train.json;  Content Length: 294.04 MiB
+INFO: dataset/msdoc/msdoc-test.qa.csv;  Content Length: 232.16 KiB
+INFO: dataset/msdoc/psgs_w100.tsv;  Content Length: 21.11 GiB
+INFO: dataset/msdoc/trec2019-test.qa.csv;  Content Length: 170.55 KiB
+INFO: dataset/msdoc/trec2019-test.rating.csv;  Content Length: 80.84 KiB
+INFO: dataset/msdoc/trec2020-test.qa.csv;  Content Length: 96.26 KiB
+INFO: dataset/msdoc/trec2020-test.rating.csv;  Content Length: 46.04 KiB</code></pre>
+</details>
+
+To download the files, please refer to [HOW_TO_DOWNLOAD](https://github.com/microsoft/SimXNS/tree/main/HOW_TO_DOWNLOAD.md).
+
+
 ## Environments Setting
 
 We implement our approach based on Pytorch and Huggingface Transformers. We list our command to prepare the experimental environment as follows:

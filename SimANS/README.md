@@ -33,36 +33,10 @@ This method has been applied in [Microsoft Bing](https://www.bing.com/), and we 
 Please find more details in the paper.
 
 
-## 🙋 How to Use
+## Released Resources
 
-**⚙️ Environment Setting**
-
-To faithfully reproduce our results, please use the correct `1.7.1` pytorch version corresponding to your platforms/CUDA versions according to [Released Packages by pytorch](https://anaconda.org/pytorch/pytorch), and install faiss successfully for evaluation.
-
-We list our command to prepare the experimental environment as follows:
-```bash
-conda install pytorch==1.7.1 cudatoolkit=11.0 -c pytorch
-conda install faiss-gpu cudatoolkit=11.0 -c pytorch
-conda install transformers
-pip install tqdm
-pip install tensorboardX
-pip install lmdb
-pip install datasets
-pip install wandb
-pip install sklearn
-pip install boto3
-```
-
-**💾 Data and Initial Checkpoint**
-
-We list the necessary data for training on MS-Pas/MS-Doc/NQ/TQ [here](https://msranlcir.blob.core.windows.net/simxns/SimANS/data.zip). You can download the compressed file and put the content in `./data`.
-If you are working on MS-Pas, you will need this [additional file](https://msranlcir.blob.core.windows.net/simxns/SimANS/data/MS-Pas/qrels.train.addition.tsv) for training.
-
-In our approach, we require to use the checkpoint from AR2 for initialization. We release them [here](https://msranlcir.blob.core.windows.net/simxns/SimANS/ckpt.zip). You can download the all-in-one compressed file and put the content in `./ckpt`.
-
-Considering the difficulity and stability of downloading such a big item, we reveal the content under the blob url of root folder `https://msranlcir.blob.core.windows.net/simxns/SimANS/`.
-So you may choose to download only a part of the resources according to the desired datasets by appending the relative path to the blob url.
-
+We release the preprocessed data and trained ckpts in [Azure Blob](https://msranlciropen.blob.core.windows.net/simxns/SimANS/).
+Here we also provide the file list under this URL:
 <details>
 <summary><b>Click here to see the file list.</b></summary>
 <pre><code>INFO: best_simans_ckpt.zip;  Content Length: 7.74 GiB
@@ -114,6 +88,35 @@ INFO: data/TQ/trivia-train.qa.csv;  Content Length: 26.67 MiB
 INFO: data/psgs_w100.tsv;  Content Length: 12.76 GiB</code></pre>
 </details>
 
+To download the files, please refer to [HOW_TO_DOWNLOAD](https://github.com/microsoft/SimXNS/tree/main/HOW_TO_DOWNLOAD.md).
+
+
+## 🙋 How to Use
+
+**⚙️ Environment Setting**
+
+To faithfully reproduce our results, please use the correct `1.7.1` pytorch version corresponding to your platforms/CUDA versions according to [Released Packages by pytorch](https://anaconda.org/pytorch/pytorch), and install faiss successfully for evaluation.
+
+We list our command to prepare the experimental environment as follows:
+```bash
+conda install pytorch==1.7.1 cudatoolkit=11.0 -c pytorch
+conda install faiss-gpu cudatoolkit=11.0 -c pytorch
+conda install transformers
+pip install tqdm
+pip install tensorboardX
+pip install lmdb
+pip install datasets
+pip install wandb
+pip install sklearn
+pip install boto3
+```
+
+**💾 Data and Initial Checkpoint**
+
+We list the necessary data for training on MS-Pas/MS-Doc/NQ/TQ [here](https://msranlciropen.blob.core.windows.net/simxns/SimANS/data.zip). You can download the compressed file directly or with [Microsoft's AzCopy CLI tool](https://learn.microsoft.com/en-us/azure/storage/common/storage-ref-azcopy) and put the content in `./data`.
+If you are working on MS-Pas, you will need this [additional file](https://msranlciropen.blob.core.windows.net/simxns/SimANS/data/MS-Pas/qrels.train.addition.tsv) for training.
+
+In our approach, we require to use the checkpoint from AR2 for initialization. We release them [here](https://msranlciropen.blob.core.windows.net/simxns/SimANS/ckpt.zip). You can download the all-in-one compressed file and put the content in `./ckpt`.
 
 
 **📋 Training Scripts**
@@ -130,7 +133,7 @@ For results in the paper, we use 8 * A100 GPUs with CUDA 11. Using different typ
 
 **⚽ Best SimANS Checkpoint**
 
-For better reproducing our experimental results, we also release all the checkpoint of our approach [here](https://msranlcir.blob.core.windows.net/simxns/SimANS/best_simans_ckpt.zip). You can download the compressed file and reuse the content for evaluation.
+For better reproducing our experimental results, we also release all the checkpoint of our approach [here](https://msranlciropen.blob.core.windows.net/simxns/SimANS/best_simans_ckpt.zip). You can download the compressed file and reuse the content for evaluation.
 
 
 ## 📜 Citation

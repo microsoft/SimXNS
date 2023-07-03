@@ -11,6 +11,22 @@ Here we show the main results on [MS MARCO](https://microsoft.github.io/msmarco/
 
 Please find more details in the paper.
 
+
+## Released Resources
+
+We release the preprocessed data and trained ckpts in [Azure Blob](https://msranlciropen.blob.core.windows.net/simxns/MASTER/).
+Here we also provide the file list under this URL:
+<details>
+<summary><b>Click here to see the file list.</b></summary>
+<pre><code>INFO: MASTER-MARCO.tar.gz;  Content Length: 1.84 GiB
+INFO: MASTER-Wiki.tar.gz;  Content Length: 1.84 GiB
+INFO: ms_pass4M5.tsv.json;  Content Length: 14.31 GiB
+INFO: wiki_psg_w1004MT5.tsv.json;  Content Length: 36.48 GiB</code></pre>
+</details>
+
+To download the files, please refer to [HOW_TO_DOWNLOAD](https://github.com/microsoft/SimXNS/tree/main/HOW_TO_DOWNLOAD.md).
+
+
 ## ⚙️ Environments Setting
 We implement our approach based on Pytorch and Huggingface Transformers. For efficiently training, we also require the public toolkit fp16 for acceleration. We list the detailed environment setting command lines as follows:
 
@@ -48,8 +64,8 @@ where "text" denotes the proprecessed documents, "queries" is the list consistin
 
 |Corpus|Description|Link|
 |---|---|---|
-|MS-MARCO|Processed Documents for MS-MARCO passage retrieval task|https://uswvhd.blob.core.windows.net/anonymous/MASTER/ms_pass4M5.tsv.json|
-|Wikipedia|Processed Documents for NQ, TQ, WQ and Squad datasets|https://uswvhd.blob.core.windows.net/anonymous/MASTER/wiki_psg_w1004MT5.tsv.json|
+|MS-MARCO|Processed Documents for MS-MARCO passage retrieval task|https://msranlciropen.blob.core.windows.net/simxns/MASTER/ms_pass4M5.tsv.json|
+|Wikipedia|Processed Documents for NQ, TQ, WQ and Squad datasets|https://msranlciropen.blob.core.windows.net/simxns/MASTER/wiki_psg_w1004MT5.tsv.json|
 
 After download the above data, researchers can remove them into the **process_data** dir for usage.
 
@@ -111,9 +127,8 @@ Here, we also provide the compressed pre-trained checkpoints of our approach on 
 
 |Corpus|Description|Link|
 |---|---|---|
-|MS-MARCO|Pre-trained Checkpoint for MS-MARCO task|https://uswvhd.blob.core.windows.net/anonymous/MASTER/MASTER-MARCO.tar.gz|
-|Wikipedia|Pre-trained Checkpoint for NQ, TQ, WQ and Squad tasks|https://uswvhd.blob.core.windows.net/anonymous/MASTER/MASTER-Wiki.tar.gz|
-
+|MS-MARCO|Pre-trained Checkpoint for MS-MARCO task|https://msranlciropen.blob.core.windows.net/simxns/MASTER/MASTER-MARCO.tar.gz|
+|Wikipedia|Pre-trained Checkpoint for NQ, TQ, WQ and Squad tasks|https://msranlciropen.blob.core.windows.net/simxns/MASTER/MASTER-Wiki.tar.gz|
 
 All the checkpoints are compressed into the tar.gz format, everyone can use them by the following command line to obtain our pre-training corpus.
 ```
