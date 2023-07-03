@@ -157,7 +157,7 @@ As our pre-trained model parameters are stored using the same format as BERT, ev
 from transformers import AutoModel
 model = AutoModel.from_pretrained('MASTER-MARCO')
 ```
-These checkpoints are identical to those in [How to Use in Huggingface's Transformers?](https://github.com/microsoft/SimXNS/tree/main/MASTER#how-to-use-in-huggingface's-transformers?).
+These checkpoints are identical to those in [How to Use in Huggingface's Transformers?](https://github.com/microsoft/SimXNS/tree/main/MASTER#how-to-use-in-huggingfaces-transformers).
 
 The demo code of finetuning is shown in the **./finetune** dir.
 During fine-tuning, the parameters of our pre-trained shallow decoders will be omitted, and only the parameters from the deep encoder will be used. We suggest to use the public released toolkit [Tevatron](https://github.com/texttron/tevatron/tree/main/examples/coCondenser-marco) to reproduce our experimental results.
