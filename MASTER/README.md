@@ -12,6 +12,22 @@ Here we show the main results on [MS MARCO](https://microsoft.github.io/msmarco/
 Please find more details in the paper.
 
 
+## How to Use in Huggingface's Transformers?
+
+We now provide the pretrained checkpoints using MSMARCO corpus and Wikipedia in huggingface.
+- https://huggingface.co/lx865712528/master-base-pretrained-msmarco
+- https://huggingface.co/lx865712528/master-base-pretrained-wiki
+
+**These models are better checkpoints for initialization a model to finetune in dense retrieval.**
+You can use the following code to load the model:
+```python
+from transformers import AutoModel
+
+model1 = AutoModel.from_pretrained('lx865712528/master-base-pretrained-msmarco')
+model2 = AutoModel.from_pretrained('lx865712528/master-base-pretrained-wiki')
+```
+
+
 ## Released Resources
 
 We release the preprocessed data and trained ckpts in [Azure Blob](https://msranlciropen.blob.core.windows.net/simxns/MASTER/).
@@ -141,6 +157,8 @@ As our pre-trained model parameters are stored using the same format as BERT, ev
 from transformers import AutoModel
 model = AutoModel.from_pretrained('MASTER-MARCO')
 ```
+These checkpoints are identical to those in [How to Use in Huggingface's Transformers?](https://github.com/microsoft/SimXNS/tree/main/MASTER#how-to-use-in-huggingface's-transformers?).
+
 The demo code of finetuning is shown in the **./finetune** dir.
 During fine-tuning, the parameters of our pre-trained shallow decoders will be omitted, and only the parameters from the deep encoder will be used. We suggest to use the public released toolkit [Tevatron](https://github.com/texttron/tevatron/tree/main/examples/coCondenser-marco) to reproduce our experimental results.
 
