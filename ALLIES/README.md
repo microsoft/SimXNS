@@ -1,7 +1,7 @@
 # ALLIES
 
 The code for our paper ALLIES: Prompting Large Language Model with Beam Search.
-![model](/Users/haosun/Documents/资料/实习/MSRA/ALLIES/code/ALLIES/assets/model.jpg)
+![model](assets/model.jpg)
 
 ## Dataset
 
