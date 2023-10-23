@@ -2,7 +2,7 @@
 
 [✨Updates](#️Updates) | [📜Citation](#Citation) | [🤘Furthermore](#Furthermore) | [❤️Contributing](#Contributing) | [📚Trademarks](#Trademarks)
 
-[SimXNS](https://aka.ms/simxns) is a research project for information retrieval by MSRA NLC IR team. Some of the techniques are actively used in [Microsoft Bing](https://www.bing.com/). This repo provides the official code implementations.
+[SimXNS](https://aka.ms/simxns) is a research project for information retrieval by MSRA NLC team. Some of the techniques are actively used in [Microsoft Bing](https://www.bing.com/). This repo provides the official code implementations.
 
 Currently, this repo contains `SimANS`, `MASTER`, `PROD` and `LEAD`, and all these methods are designed for information retrieval.
 Here are some basic descriptions to help you catch up with the characteristics of each work:
@@ -10,9 +10,11 @@ Here are some basic descriptions to help you catch up with the characteristics o
 - [**MASTER**](https://arxiv.org/abs/2212.07841) is a multi-task pre-trained model that unifies and integrates multiple pre-training tasks with different learning objectives under the bottlenecked masked autoencoder architecture.
 - [**PROD**](https://arxiv.org/abs/2209.13335) is a novel distillation framework for dense retrieval, which consists of a teacher progressive distillation and a data progressive distillation to gradually improve the student.
 - [**LEAD**](https://arxiv.org/abs/2212.05225) aligns the layer features of student and teacher, emphasizing more on the informative layers by re-weighting.
+- [**ALLIES**](https://arxiv.org/abs/2305.14766) leverages LLMs to iteratively generate new queries related to the original query, enabling an iterative reasoning process. By iteratively refining and expanding the scope of the original query, ALLIES captures and utilizes hidden knowledge that may not be directly obtainable through retrieval.
 
 ## Updates
 
+- 2023/10/18: release the official code of [ALLIES](https://github.com/microsoft/SimXNS/tree/main/ALLIES).
 - 2023/07/03: upload the pretrained MASTER checkpoints for [MARCO](https://huggingface.co/lx865712528/master-base-pretrained-msmarco) and [Wikipedia](https://huggingface.co/lx865712528/master-base-pretrained-wiki) to huggingface model hub.
 - 2023/07/03: update approaches for downloading resources.
 - 2023/05/29: release the official code of [LEAD](https://github.com/microsoft/SimXNS/tree/main/LEAD).
@@ -29,33 +31,40 @@ If you extend or use this work, please cite our paper where it was introduced:
 - **SimANS: Simple Ambiguous Negatives Sampling for Dense Text Retrieval**. Kun Zhou, Yeyun Gong, Xiao Liu, Wayne Xin Zhao, Yelong Shen, Anlei Dong, Jingwen Lu, Rangan Majumder, Ji-Rong Wen, Nan Duan, Weizhu Chen. ***EMNLP 2022***. [Code](https://github.com/microsoft/SimXNS/tree/main/SimANS), [Paper](https://arxiv.org/abs/2210.11773).
 - **MASTER: Multi-task Pre-trained Bottlenecked Masked Autoencoders are Better Dense Retrievers**. Kun Zhou, Xiao Liu, Yeyun Gong, Wayne Xin Zhao, Daxin Jiang, Nan Duan, Ji-Rong Wen. ***ECML-PKDD 2023***. [Code](https://github.com/microsoft/SimXNS/tree/main/MASTER), [Paper](https://arxiv.org/abs/2212.07841).
 - **PROD: Progressive Distillation for Dense Retrieval**. Zhenghao Lin, Yeyun Gong, Xiao Liu, Hang Zhang, Chen Lin, Anlei Dong, Jian Jiao, Jingwen Lu, Daxin Jiang, Rangan Majumder, Nan Duan. ***WWW 2023***. [Code](https://github.com/microsoft/SimXNS/tree/main/PROD), [Paper](https://arxiv.org/abs/2209.13335).
-- **LEAD: Liberal Feature-based Distillation for Dense Retrieval**. Hao Sun, Xiao Liu, Yeyun Gong, Anlei Dong, Jian Jiao, Jingwen Lu, Yan Zhang, Daxin Jiang, Linjun Yang, Rangan Majumder, Nan Duan. ***arXiv***. [Code](https://github.com/microsoft/SimXNS/tree/main/LEAD), [Paper](https://arxiv.org/abs/2212.05225).
+- **LEAD: Liberal Feature-based Distillation for Dense Retrieval**. Hao Sun, Xiao Liu, Yeyun Gong, Anlei Dong, Jian Jiao, Jingwen Lu, Yan Zhang, Daxin Jiang, Linjun Yang, Rangan Majumder, Nan Duan. ***WSDM 2024***. [Code](https://github.com/microsoft/SimXNS/tree/main/LEAD), [Paper](https://arxiv.org/abs/2212.05225).
+- **Allies: Prompting Large Language Model with Beam Search**. Hao Sun, Xiao Liu, Yeyun Gong, Yan Zhang, Daxin Jiang, Linjun Yang, Nan Duan. ***Findings of EMNLP 2023***. [Code](https://github.com/microsoft/SimXNS/tree/main/ALLIES), [Paper](https://arxiv.org/abs/2305.14766).
 
 
 ```bibtex
-@article{zhou2022simans,
-   title={SimANS: Simple Ambiguous Negatives Sampling for Dense Text Retrieval},
-   author={Kun Zhou, Yeyun Gong, Xiao Liu, Wayne Xin Zhao, Yelong Shen, Anlei Dong, Jingwen Lu, Rangan Majumder, Ji-Rong Wen, Nan Duan and Weizhu Chen},
+@inproceedings{zhou2022simans,
+   title     = {{SimANS:} Simple Ambiguous Negatives Sampling for Dense Text Retrieval},
+   author    = {Kun Zhou, Yeyun Gong, Xiao Liu, Wayne Xin Zhao, Yelong Shen, Anlei Dong, Jingwen Lu, Rangan Majumder, Ji-Rong Wen, Nan Duan and Weizhu Chen},
    booktitle = {{EMNLP}},
-   year={2022}
+   year      = {2022}
 }
-@article{zhou2022master,
-   title={MASTER: Multi-task Pre-trained Bottlenecked Masked Autoencoders are Better Dense Retrievers},
-   author={Kun Zhou, Xiao Liu, Yeyun Gong, Wayne Xin Zhao, Daxin Jiang, Nan Duan, Ji-Rong Wen},
+@inproceedings{zhou2023master,
+   title     = {{MASTER:} Multi-task Pre-trained Bottlenecked Masked Autoencoders are Better Dense Retrievers},
+   author    = {Kun Zhou, Xiao Liu, Yeyun Gong, Wayne Xin Zhao, Daxin Jiang, Nan Duan, Ji-Rong Wen},
    booktitle = {{ECML-PKDD}},
-   year={2023}
+   year      = {2023}
 }
-@article{lin2023prod,
-   title={PROD: Progressive Distillation for Dense Retrieval},
-   author={Zhenghao Lin, Yeyun Gong, Xiao Liu, Hang Zhang, Chen Lin, Anlei Dong, Jian Jiao, Jingwen Lu, Daxin Jiang, Rangan Majumder, Nan Duan},
+@inproceedings{lin2023prod,
+   title     = {{PROD:} Progressive Distillation for Dense Retrieval},
+   author    = {Zhenghao Lin, Yeyun Gong, Xiao Liu, Hang Zhang, Chen Lin, Anlei Dong, Jian Jiao, Jingwen Lu, Daxin Jiang, Rangan Majumder and Nan Duan},
    booktitle = {{WWW}},
-   year={2023}
+   year      = {2023}
 }
-@article{sun2022lead,
-  title={LEAD: Liberal Feature-based Distillation for Dense Retrieval},
-  author={Sun, Hao and Liu, Xiao and Gong, Yeyun and Dong, Anlei and Jiao, Jian and Lu, Jingwen and Zhang, Yan and Jiang, Daxin and Yang, Linjun and Majumder, Rangan and others},
-  journal={arXiv preprint arXiv:2212.05225},
-  year={2022}
+@inproceedings{sun2024lead,
+   title     = {{LEAD:} Liberal Feature-based Distillation for Dense Retrieval},
+   author    = {Hao Sun, Xiao Liu, Yeyun Gong, Anlei Dong, Jian Jiao, Jingwen Lu, Yan Zhang, Daxin Jiang, Linjun Yang, Rangan Majumder and Nan Duan},
+   booktitle = {{WSDM}},
+   year      = {2024}
+}
+@inproceedings{sun2023allies,
+   title     = {{Allies:} Prompting Large Language Model with Beam Search},
+   author    = {Hao Sun, Xiao Liu, Yeyun Gong, Yan Zhang, Daxin Jiang, Linjun Yang and Nan Duan},
+   booktitle = {{EMNLP}},
+   year      = {2023}
 }
 ```
 

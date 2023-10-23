@@ -1,6 +1,7 @@
 # ALLIES
 
-The code for our paper ALLIES: Prompting Large Language Model with Beam Search.
+The code for our paper [ALLIES: Prompting Large Language Model with Beam Search](https://arxiv.org/abs/2305.14766).
+
 ![model](assets/model.jpg)
 
 ## Dataset
