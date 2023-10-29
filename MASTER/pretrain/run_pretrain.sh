@@ -1,0 +1,20 @@
+CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 python -m torch.distributed.launch --nproc_per_node 8 --master_port 50000 run_pre_training.py \
+  --output_dir ckpt/MASTER \
+  --model_name_or_path bert-base-uncased \
+  --do_train \
+  --save_steps 40000 \
+  --per_device_train_batch_size 128 \
+  --gradient_accumulation_steps 2 \
+  --warmup_ratio 0.1 \
+  --learning_rate 3e-4 \
+  --num_train_epochs 40 \
+  --overwrite_output_dir \
+  --dataloader_num_workers 32 \
+  --n_head_layers 2 \
+  --skip_from 6 \
+  --max_seq_length 128 \
+  --train_dir process_data \
+  --frequency_dict frequency_dict_MS_doc.json \
+  --weight_decay 0.01 \
+  --late_mlm \
+  --fp16
