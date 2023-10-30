@@ -57,11 +57,11 @@ bash generate_query.sh
 
 # Citation
 If you want to use this code in your research, please cite our [paper](https://arxiv.org/abs/2212.09114):
-```bash
-
+```bibtex
 @inproceedings{he-CAPSTONE,
     title = "CAPSTONE: Curriculum Sampling for Dense Retrieval with Document Expansion",
     author = "Xingwei He and Yeyun Gong and A-Long Jin and Hang Zhang and Anlei Dong and Jian Jiao and Siu Ming Yiu and Nan Duan",
     booktitle = "Proceedings of EMNLP",
     year = "2023",
 }
+```
