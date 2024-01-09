@@ -18,6 +18,25 @@ dataset/tqa-test.jsonl
 
 dataset/webq-test.jsonl
 
+
+## Released Resources
+
+We release the preprocessed data and trained ckpts in [Azure Blob](https://msranlciropen.blob.core.windows.net/simxns/ALLIES/).
+Here we also provide the file list under this URL:
+<details>
+<summary><b>Click here to see the file list.</b></summary>
+<pre><code>INFO: nq/de-checkpoint-10000/passage_embedding.pb;  Content Length: 60.13 GiB
+INFO: nq/de-checkpoint-10000/passage_embedding2id.pb;  Content Length: 160.33 MiB
+INFO: webq/de-checkpoint-400/passage_embedding.pb;  Content Length: 60.13 GiB
+INFO: webq/de-checkpoint-400/passage_embedding2id.pb;  Content Length: 160.33 MiB
+INFO: tq/de-checkpoint-10000/passage_embedding.pb;  Content Length: 60.13 GiB
+INFO: tq/de-checkpoint-10000/passage_embedding2id.pb;  Content Length: 160.33 MiB</code></pre>
+</details>
+
+To download the files, please refer to [HOW_TO_DOWNLOAD](https://github.com/microsoft/SimXNS/tree/main/HOW_TO_DOWNLOAD.md).
+
+
+
 ## Run
 
 ### Directly Answer
